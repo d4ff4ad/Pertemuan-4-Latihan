@@ -26,8 +26,15 @@ class Product {
   });
 }
 
-class KatalogProduk extends StatelessWidget {
-  KatalogProduk({super.key});
+class KatalogProduk extends StatefulWidget {
+  const KatalogProduk({super.key});
+
+  @override
+  State<KatalogProduk> createState() => _KatalogProdukState();
+}
+
+class _KatalogProdukState extends State<KatalogProduk> {
+  final Set<String> _favoriteIds = {};
 
   final List<Product> products = [
     Product(
@@ -124,7 +131,7 @@ class KatalogProduk extends StatelessWidget {
         padding: const EdgeInsets.all(12.0),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            childAspectRatio: 0.48,
+            mainAxisExtent: 320,
             crossAxisSpacing: 12,
             mainAxisSpacing: 12,
           ),
@@ -175,8 +182,20 @@ class KatalogProduk extends StatelessWidget {
                         top: 4,
                         right: 4,
                         child: IconButton(
-                          icon: const Icon(Icons.favorite_border, color: Colors.white, size: 22),
-                          onPressed: () {},
+                          icon: Icon(
+                            _favoriteIds.contains(product.id) ? Icons.favorite : Icons.favorite_border,
+                            color: _favoriteIds.contains(product.id) ? Colors.red : Colors.white,
+                            size: 22,
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              if (_favoriteIds.contains(product.id)) {
+                                _favoriteIds.remove(product.id);
+                              } else {
+                                _favoriteIds.add(product.id);
+                              }
+                            });
+                          },
                           constraints: const BoxConstraints(),
                           padding: const EdgeInsets.all(4),
                         ),
