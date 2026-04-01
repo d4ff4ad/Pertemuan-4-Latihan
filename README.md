@@ -53,7 +53,7 @@ Berikut adalah gambaran hasil akhir dari antarmuka aplikasi.
 
 
 ### 👤 Halaman Profil
-![Tampilan Profil](screenshots/Profil.png)
+![Tampilan Profil](screenshots/Profile.png)
 
 
 
