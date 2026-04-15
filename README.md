@@ -64,11 +64,9 @@ Berikut penampakan desain antarmuka akhir dari replikasi kloning Dafjek:
 
 *(Sila tambahkan dan letakkan tangkapan layar perangkat/emulator nyata (*real device screenshot*) ke dalam folder baru penampungan bernama `screenshots` untuk menyalakan fitur perenderan gambar di bawah)*
 
-- **Halaman Beranda (Home)**
-  <br>![Tampilan Beranda](screenshots/Home.png)
+![alt text](image.png)
 
-- **Halaman Katalog Belanja**
-  <br>![Tampilan Katalog](screenshots/Katalog.png)
+![alt text](image-1.png)
 
-- **Halaman Profil Akun**
-  <br>![Tampilan Profil](screenshots/Profile.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
